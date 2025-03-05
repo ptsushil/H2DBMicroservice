@@ -13,11 +13,14 @@ public class UserService {
 
     @Autowired
     UserRepository userRepository;
-    public Optional<User> getUser(String name)
+    public Optional<User> getUser(Long id)
+    {
+        return userRepository.findById(id);
+    }
+    public Optional<User> getUserByName(String name)
     {
         return userRepository.findByUserName(name);
     }
-
     public User createUser(User data) {
         // Make sure we aren't getting a request to create something that already exists
         if (userRepository.findById(data.getId()).isPresent() ||

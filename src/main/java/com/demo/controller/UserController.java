@@ -18,10 +18,15 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @RequestMapping(value = "/{name}", method = RequestMethod.GET)
-    public Optional<User> getUser(@PathVariable String name)
+    @RequestMapping(value = "/{name}/name", method = RequestMethod.GET)
+    public Optional<User> getUserByName(@PathVariable String name)
     {
-        return userService.getUser(name);
+        return userService.getUserByName(name);
+    }
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public Optional<User> getUser(@PathVariable Long id)
+    {
+        return userService.getUser(id);
     }
 
     @RequestMapping(method = RequestMethod.POST)
