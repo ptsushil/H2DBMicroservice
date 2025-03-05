@@ -1,1 +1,1 @@
-This repository used for H2 database in in memory and file
+This repository used for H2 database in memory and file
