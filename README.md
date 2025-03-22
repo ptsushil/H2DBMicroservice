@@ -1,8 +1,3 @@
-Here is the content for your README.md file:
-
-markdown
-Copy
-Edit
 # H2 Database Integration for Order Cancellation
 
 This repository is used for **H2 database** in both **memory** and **file** mode.
@@ -22,8 +17,16 @@ This repository is used for **H2 database** in both **memory** and **file** mode
 2. Process and transform the data into shipment cancellation XML format.
 3. Store the necessary details in the H2 database.
 
+## Example XML Output
+```xml
 <Shipment ShipmentNo="102538237" ShipNode="4756" SellerOrganizationCode="BL_DOTCOM">
     <ShipmentLines>
         <ShipmentLine Action="CANCELED" ItemID="810758724" ShipmentLineNo="1" UnitOfMeasure="EA" Quantity="1" CancelReasonCode="ChangedMind"/>
+    </ShipmentLines>
+</Shipment>
+<Shipment ShipmentNo="102538234" ShipNode="4754" SellerOrganizationCode="BL_DOTCOM">
+    <ShipmentLines>
+        <ShipmentLine Action="CANCELED" ItemID="810776211" ShipmentLineNo="1" UnitOfMeasure="EA" Quantity="1" CancelReasonCode="ChangedMind"/>
+        <ShipmentLine Action="CANCELED" ItemID="810776251" ShipmentLineNo="2" UnitOfMeasure="EA" Quantity="1" CancelReasonCode="ChangedMind"/>
     </ShipmentLines>
 </Shipment>
